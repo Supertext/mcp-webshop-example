@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Firn{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/fonts.css">
+  <link rel="stylesheet" href="/static/css/tokens.css">
+  <link rel="stylesheet" href="/static/css/components.css">
+  <link rel="stylesheet" href="/static/css/trust.css">
+  <script src="/static/js/htmx.min.js" defer></script>
+</head>
+<body{% if trust %} data-trust="on"{% endif %}>
+  <header class="site-header">
+   <div class="site-header-inner">
+    <a class="wordmark" href="{{ prefix }}/">Firn</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="{{ prefix }}/c/avalanche-safety">{{ t('nav.avalanche') }}</a>
+      <a href="{{ prefix }}/c/climbing">{{ t('nav.climbing') }}</a>
+      <a href="{{ prefix }}/guide/avalanche-basics">{{ t('nav.guide') }}</a>
+    </nav>
+    <nav class="locale-switcher" aria-label="Language">
+      <ul>
+        {% for code in locales %}
+          <li><a href="{{ '' if code == 'en' else '/' + code }}{{ path }}"
+                 {% if code == locale %}aria-current="true"{% endif %}>{{ code }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <a class="cart-link" href="{{ prefix }}/cart">{{ t('nav.cart') }}</a>
+   </div>
+  </header>
+
+  <main>{% block content %}{% endblock %}</main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      {% for slug in ('terms', 'returns', 'warranty', 'privacy', 'shipping') %}
+        <a href="{{ prefix }}/legal/{{ slug }}">{{ t('footer.' ~ slug) }}</a>
+      {% endfor %}
+    </nav>
+  </footer>
+
+  <div id="live"
+       hx-get="{{ prefix }}/_state?path={{ path }}&locale={{ locale }}"
+       hx-trigger="load, every 3s"
+       hx-swap="none"
+       data-cv="{{ catalog_version }}"></div>
+
+  {% if trust %}
+  <aside class="trust-legend" id="trust-legend" aria-live="polite">
+    <span><b id="c-verified">0</b> ✓</span>
+    <span><b id="c-machine">0</b> MT</span>
+    <span><b id="c-pending">0</b> ⏱</span>
+    <span><b id="c-stale">0</b> !</span>
+    <span><b id="c-en">0</b> EN</span>
+  </aside>
+  {% endif %}
+
+  <script>
+    document.body.addEventListener("htmx:afterRequest", function (event) {
+      var xhr = event.detail.xhr;
+      if (!xhr) return;
+
+      var version = xhr.getResponseHeader("X-Catalog-Version");
+      var live = document.getElementById("live");
+      if (version && live && live.dataset.cv && version !== live.dataset.cv) {
+        location.reload();
+        return;
+      }
+
+      var raw = xhr.getResponseHeader("X-State-Counts");
+      var legend = document.getElementById("trust-legend");
+      if (!raw || !legend) return;
+      var counts = JSON.parse(raw);
+      var set = function (id, value) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = value || 0;
+      };
+      set("c-verified", counts.verified);
+      set("c-machine", counts.machine);
+      set("c-pending", counts.pending);
+      set("c-stale", counts.stale);
+      set("c-en", (counts.withheld || 0) + (counts.fallback || 0));
+    });
+  </script>
+</body>
+</html>

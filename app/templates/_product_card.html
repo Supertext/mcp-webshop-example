@@ -1,0 +1,13 @@
+<li class="product-card">
+  <a href="{{ prefix }}/p/{{ p.sku }}">
+    <span class="card-ground">
+      {% with sizes = '(max-width: 768px) 100vw, 320px' %}{% include '_product_image.html' %}{% endwith %}
+    </span>
+    <span class="card-body">
+      <span class="sku">{{ p.sku }}</span>
+      <{{ card_heading | default('h3') }}>{{ t(p.sku | product_key('name')) }}</{{ card_heading | default('h3') }}>
+      <span class="tagline">{{ t(p.sku | product_key('tagline')) }}</span>
+      <span class="price">CHF {{ p.price_chf }}</span>
+    </span>
+  </a>
+</li>

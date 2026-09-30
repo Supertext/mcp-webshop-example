@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+{% block content %}
+<h1>{{ t('category.' ~ category ~ '.title') }}</h1>
+{{ notice('category.' ~ category ~ '.intro') }}
+<p>{{ t('category.' ~ category ~ '.intro') }}</p>
+
+<ul class="product-grid">
+  {% for p in items %}
+    {% set card_heading = 'h2' %}{% include '_product_card.html' %}
+  {% endfor %}
+</ul>
+{% endblock %}

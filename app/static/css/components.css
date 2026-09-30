@@ -1,0 +1,1311 @@
+/* Component styles — Firn Shop, from the Claude Design comp.
+   Structure follows the comp: a white header rail over a cool paper ground,
+   generous 1280px container, cards that lean on hairline borders rather than
+   heavy elevation, mono for anything machine-ish (SKUs, prices, labels), and
+   two dark bands (guide teaser, footer) for contrast.
+
+   Only tokens defined in tokens.css are referenced here — that file is the
+   contract, and it may be swapped wholesale. */
+
+/* Contains the hero's full-bleed negative margins without a horizontal
+   scrollbar. Must be on the root: it is the scroll container. clip (not
+   hidden) so position: sticky keeps working inside. */
+html {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--color-surface-alt);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-brand-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* One container rule for every band, so the header, content and footer all
+   align on the same edges. box-sizing: content-box keeps --container as the
+   *content* width — the gutter sits outside it, matching the comp. */
+main,
+.site-header-inner,
+.site-footer nav,
+.hero-inner {
+  box-sizing: content-box;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+main {
+  padding-block: var(--space-6) var(--space-7);
+}
+
+/* ---------- Shell ---------- */
+
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  padding: var(--space-5) 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.wordmark:hover {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  flex: 1 1 20rem;
+  min-width: 0;
+  order: 3;
+}
+
+.site-nav a {
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  padding: var(--space-2) 0;
+}
+
+.site-nav a:hover {
+  color: var(--color-ink);
+}
+
+.locale-switcher {
+  margin-left: auto;
+}
+
+.locale-switcher ul {
+  display: flex;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.locale-switcher a {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-ink-faint);
+}
+
+.locale-switcher a:hover {
+  background: var(--color-surface-sunk);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.locale-switcher a[aria-current="true"] {
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cart-link:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.site-footer {
+  background: var(--color-dark);
+  color: var(--color-dark-ink-muted);
+  margin-top: var(--space-7);
+}
+
+.site-footer nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-5);
+  padding-block: 3.5rem var(--space-6);
+}
+
+.site-footer h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-dark-accent);
+  margin: 0 0 var(--space-4);
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.site-footer a {
+  color: var(--color-dark-ink-muted);
+}
+
+.site-footer a:hover {
+  color: var(--color-dark-ink);
+}
+
+/* ---------- Typography ---------- */
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.14;
+  color: var(--color-ink);
+  margin: 0 0 var(--space-4);
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+
+/* ---------- Home ---------- */
+
+.hero {
+  position: relative;
+  background:
+    radial-gradient(85% 120% at 6% 0%, rgba(15, 122, 135, 0.16) 0%, rgba(15, 122, 135, 0) 60%),
+    linear-gradient(180deg, #E7F0F2 0%, var(--color-surface-alt) 100%);
+  border-bottom: 1px solid var(--color-border);
+  /* Full-bleed band: escape main's container, then re-centre content via
+     .hero-inner. The negative inline margin is bounded by body's
+     overflow-x: clip, so no scrollbar-width fudge is needed. */
+  margin-block: calc(-1 * var(--space-6)) var(--space-6);
+  margin-inline: calc(50% - 50vw);
+  padding-block: 6.5rem 7rem;
+  overflow: hidden;
+}
+
+/* Contour art sits behind the copy at low opacity, bleeding past the edges. */
+.hero-terrain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  color: var(--color-brand);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.hero-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3) var(--space-5);
+  margin: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-brand);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-5) var(--space-6);
+  font-size: var(--text-sm);
+}
+
+.hero-facts dt {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-ink-faint);
+  white-space: nowrap;
+}
+
+.hero-facts dd {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.hero h1 {
+  font-size: var(--text-4xl);
+  line-height: 1.06;
+  max-width: 18ch;
+}
+
+.hero p {
+  font-size: var(--text-lg);
+  color: var(--color-ink-muted);
+  max-width: 44ch;
+  margin: 0 0 var(--space-5);
+}
+
+.hero .cta {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-brand);
+  color: var(--color-brand-ink);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+.hero .cta:hover {
+  background: var(--color-brand-strong);
+  color: var(--color-brand-ink);
+  text-decoration: none;
+}
+
+.value-props {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-7);
+  /* it is a <ul>: drop the default marker and indent or the grid gains a
+     phantom first column */
+  list-style: none;
+  padding: 0;
+}
+
+.value-props > * {
+  border-top: 1px solid var(--color-border-strong);
+  padding-top: var(--space-5);
+}
+
+.value-props h3 {
+  font-size: 1.375rem;
+  margin-bottom: var(--space-2);
+}
+
+.value-props p {
+  margin: 0;
+  color: var(--color-ink-muted);
+}
+
+.featured {
+  margin-bottom: var(--space-7);
+}
+
+.featured > h2 {
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+/* ---------- Spotlight (lead product, comp's feature card) ---------- */
+
+.spotlight {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  color: inherit;
+  margin-bottom: var(--space-5);
+}
+
+.spotlight:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.spotlight:hover h3 {
+  color: var(--color-brand);
+}
+
+.spotlight-ground {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--color-brand-wash) 0%, var(--color-surface-sunk) 100%);
+  padding: var(--space-6);
+}
+
+.spotlight-ground img.is-glyph {
+  width: 76%;
+  height: auto;
+  filter: drop-shadow(0 24px 40px rgba(16, 35, 43, 0.28));
+}
+
+.spotlight-ground:has(img.is-photo) {
+  padding: 0;
+}
+
+.spotlight-ground img.is-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* The feature card earns more height than a grid card. */
+.spotlight-ground {
+  min-height: 26rem;
+}
+
+.spotlight-ground .badge {
+  position: absolute;
+  left: var(--space-5);
+  top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(16, 35, 43, 0.9);
+  color: var(--color-surface);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+}
+
+.spotlight-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-6) 2.75rem;
+}
+
+.spotlight-detail h3 {
+  font-size: 2.5rem;
+  line-height: 1.06;
+  margin: 0;
+}
+
+.spotlight-detail .tagline {
+  font-size: var(--text-lg);
+  color: var(--color-ink-muted);
+  margin: 0;
+  max-width: 38ch;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chips li {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-brand);
+  background: var(--color-brand-wash);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-3);
+}
+
+.spotlight-price {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.875rem;
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-surface-sunk);
+}
+
+.guide-teaser {
+  background: var(--color-dark);
+  color: var(--color-dark-ink);
+  padding: var(--space-6) 3rem;
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.guide-teaser h2,
+.guide-teaser h3 {
+  color: var(--color-dark-ink);
+  margin: 0;
+}
+
+.guide-teaser p {
+  margin: 0;
+  color: var(--color-dark-ink-muted);
+  max-width: 60ch;
+}
+
+.guide-teaser a {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-dark-accent);
+  color: var(--color-dark-deep);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.guide-teaser a:hover {
+  text-decoration: none;
+  filter: brightness(1.08);
+}
+
+/* ---------- Product grid and cards ---------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.product-card a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: inherit;
+  text-decoration: none;
+  flex: 1;
+}
+
+/* Tinted ground behind the product glyph — the comp's card treatment. The
+   text block below it carries the padding instead of the link. */
+.card-ground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--color-brand-wash) 0%, var(--color-surface-sunk) 100%);
+  padding: var(--space-5);
+}
+
+/* A glyph floats on the tinted ground; a photograph replaces it entirely. */
+.card-ground img.is-glyph {
+  width: 72%;
+  height: auto;
+  filter: drop-shadow(0 14px 24px rgba(16, 35, 43, 0.2));
+}
+
+.card-ground:has(img.is-photo) {
+  padding: 0;
+}
+
+.card-ground img.is-photo {
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+  display: block;
+}
+
+/* The text block carries the padding. Using a wrapper rather than margins on
+   each child, because the h2/h3 and .tagline margin shorthands would override
+   individual margin-left/right longhands. */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0 var(--space-5) var(--space-5);
+  flex: 1;
+}
+
+.product-card a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card a:hover h2,
+.product-card a:hover h3 {
+  color: var(--color-brand);
+}
+
+.product-card img {
+  display: block;
+}
+
+.product-card h2,
+.product-card h3 {
+  font-size: 1.375rem;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.product-card .tagline {
+  display: block;
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  flex: 1;
+  margin: 0;
+}
+
+.product-card .sku {
+  display: block;
+}
+
+.product-card .price {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  padding-top: var(--space-3);
+  margin-top: auto;
+  border-top: 1px solid var(--color-surface-sunk);
+}
+
+.product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--color-brand-wash) 0%, var(--color-surface-sunk) 100%);
+}
+
+.product-image img.is-photo {
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+  display: block;
+}
+
+.product-image img.is-glyph {
+  width: 78%;
+  height: auto;
+  margin: var(--space-5) 0;
+  filter: drop-shadow(0 20px 32px rgba(16, 35, 43, 0.22));
+}
+
+/* ---------- Product detail ---------- */
+
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* SKU eyebrow — real catalogue data, set in mono above the heading */
+.sku {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  color: var(--color-ink-faint);
+}
+
+/* Price and add-to-cart read as one purchase card, per the comp */
+.purchase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-5);
+}
+
+.product .price {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.875rem;
+  color: var(--color-ink);
+  margin: 0;
+  flex: 1;
+}
+
+.product .short {
+  font-size: var(--text-lg);
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+.product .long {
+  margin: 0;
+}
+
+.specs {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.specs th,
+.specs td {
+  text-align: left;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.specs th {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--color-ink-faint);
+  white-space: nowrap;
+  padding-right: var(--space-4);
+}
+
+.cert {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-brand);
+  background: var(--color-brand-wash);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-3);
+  /* a badge, so it must hug its text rather than fill the column */
+  align-self: start;
+  width: fit-content;
+}
+
+.add-to-cart button,
+.checkout-form button,
+.cart-total + form button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-ink);
+  color: var(--color-surface);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-to-cart button:hover,
+.checkout-form button:hover,
+.cart-total + form button:hover {
+  background: var(--color-brand);
+}
+
+.care {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-brand);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+/* The safety block is the workshop's argument made visible: it carries the
+   amber warning treatment from the comp so it reads as consequential even
+   before the trust overlay is switched on. */
+.safety {
+  background: var(--color-caution-bg);
+  border: 1px solid var(--color-caution-border);
+  border-left: 3px solid var(--state-pending);
+  border-radius: 14px;
+  padding: var(--space-5) var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.safety h2,
+.care h2 {
+  font-size: var(--text-xl);
+}
+
+.safety h2 {
+  color: var(--color-caution-ink);
+}
+
+.safety-body,
+.legal-body {
+  white-space: pre-line;
+}
+
+/* Sits inside the amber safety block, so it takes a white ground and the
+   source-state blue rule — the same hue the withheld text itself is tinted
+   with, tying the notice to the strings it explains. */
+.withheld-notice {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-left: 3px solid var(--state-source);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-4);
+}
+
+.withheld-notice b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin-bottom: var(--space-1);
+}
+
+blockquote {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-border-strong);
+  color: var(--color-ink-muted);
+}
+
+/* Long-form: hold the measure to a readable line length. Full-width body text
+   is what makes a guide page feel like work — and this demo's analytics story
+   is about people bouncing off exactly these pages. */
+.guide,
+.legal {
+  max-width: 68ch;
+}
+
+/* Article body beside the comp's 300px related-equipment rail. */
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.article-aside {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-brand);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-5);
+  position: sticky;
+  top: var(--space-4);
+}
+
+.article-aside h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin: 0 0 var(--space-4);
+}
+
+.article-aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.article-aside a {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: center;
+  color: inherit;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.article-aside a:hover {
+  background: var(--color-surface-alt);
+  text-decoration: none;
+}
+
+.article-aside a:hover .aside-name {
+  color: var(--color-brand);
+}
+
+.aside-thumb {
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.aside-thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+}
+
+.aside-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.aside-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1.2;
+}
+
+.article-aside .price {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+.guide h2 {
+  margin-top: var(--space-6);
+}
+
+.guide p,
+.guide div,
+.legal-body {
+  margin: 0 0 var(--space-4);
+}
+
+.standfirst {
+  font-size: var(--text-lg);
+  color: var(--color-ink-muted);
+}
+
+/* ---------- Cart, checkout, order ---------- */
+
+/* The page heading sits on the paper ground, like every other route; only the
+   content below it is carded. Otherwise the h1 is inset by the card padding
+   and stops aligning with the header and every other page's title. */
+.cart-lines,
+.checkout-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+}
+
+/* last line needs no rule — the card border closes the list */
+.cart-line:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.order {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+/* Lines and summary side by side, per the comp. */
+.cart-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.cart-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-line {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) auto auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.line-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--color-brand-wash) 0%, var(--color-surface-sunk) 100%);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+}
+
+.line-thumb img {
+  width: 100%;
+  height: auto;
+}
+
+.line-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.line-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.2;
+}
+
+.cart-summary {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: var(--space-4);
+}
+
+.cart-summary .cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-brand);
+  color: var(--color-brand-ink);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.cart-summary .cta:hover {
+  background: var(--color-brand-strong);
+  color: var(--color-brand-ink);
+  text-decoration: none;
+}
+
+/* ---------- Legal (sidebar + document) ---------- */
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.legal-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  border-top: 1px solid var(--color-border-strong);
+  padding-top: var(--space-4);
+}
+
+.legal-toc a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.legal-toc a:hover {
+  background: var(--color-surface-sunk);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.legal-toc a[aria-current="page"] {
+  background: var(--color-brand-wash);
+  color: var(--color-brand);
+  font-weight: 600;
+}
+
+/* ---------- Analytics stat tiles ---------- */
+
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.stat-tiles li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-ink-faint);
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 2.125rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.line-qty,
+.line-price {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-muted);
+}
+
+.cart-total {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  text-align: right;
+}
+
+.remove-line button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-ink-faint);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.remove-line button:hover {
+  color: var(--state-stale);
+}
+
+.checkout-form {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 34rem;
+}
+
+.checkout-form p {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+}
+
+.checkout-form label {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.checkout-form input[type="text"] {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: inherit;
+  font-size: var(--text-base);
+}
+
+.checkout-form fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin: var(--space-2) 0;
+}
+
+.checkout-form legend {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  padding: 0 var(--space-2);
+}
+
+.checkout-form fieldset p {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.order-summary {
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.order-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  background: var(--color-surface-sunk);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  display: inline-block;
+}
+
+.cart-empty {
+  color: var(--color-ink-muted);
+}
+
+/* ---------- Analytics dashboard (internal tool) ---------- */
+
+.bars { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.bars li { display: grid; grid-template-columns: 16rem 1fr 5rem; gap: 0.75rem;
+           align-items: center; }
+.bars .bar { height: 1.1rem; background: var(--color-brand); width: var(--w);
+             border-radius: var(--radius-sm); }
+.bars .bar-label,
+.bars .bar-value { font-family: var(--font-mono); font-size: var(--text-xs); }
+.bars .bar-value { text-align: right; font-variant-numeric: tabular-nums; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* The funnel table has six columns and cannot shrink below its content on a
+   phone; let each section scroll rather than the whole page. */
+main > section {
+  overflow-x: auto;
+}
+
+main > section > table th,
+main > section > table td {
+  text-align: left;
+  padding: var(--space-2) var(--space-4) var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+main > section > table th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-faint);
+}
+
+main > section > table td {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .product,
+  .hero-inner,
+  .spotlight,
+  .cart-layout,
+  .legal-layout,
+  .article-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cart-summary,
+  .article-aside {
+    position: static;
+  }
+
+  .spotlight-detail h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gutter: 1.25rem;
+  }
+
+  .hero {
+    padding: 3rem var(--gutter);
+  }
+
+  .hero h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .guide-teaser {
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    gap: var(--space-2);
+  }
+
+  .cart-line {
+    grid-template-columns: 64px minmax(0, 1fr) auto;
+  }
+
+  .cart-line .line-qty {
+    grid-column: 2;
+  }
+
+  .bars li {
+    grid-template-columns: 8rem 1fr 3.5rem;
+  }
+}

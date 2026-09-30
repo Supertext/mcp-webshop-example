@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+{% block content %}
+<div class="legal-layout">
+  {# Sibling documents, from the route's own slug list — real navigation. #}
+  <nav class="legal-toc" aria-label="Legal documents">
+    <ul>
+      {% for other in legal_slugs %}
+        <li>
+          <a href="{{ prefix }}/legal/{{ other }}"
+             {% if other == slug %}aria-current="page"{% endif %}>{{ t('footer.' ~ other) }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <article class="legal">
+    <span class="sku">{{ slug | upper }}</span>
+    <h1>{{ t('legal.' ~ slug ~ '.title') }}</h1>
+    {{ notice('legal.' ~ slug ~ '.body') }}
+    <div class="legal-body">{{ t('legal.' ~ slug ~ '.body') }}</div>
+  </article>
+</div>
+{% endblock %}

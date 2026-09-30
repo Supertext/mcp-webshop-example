@@ -1,0 +1,12 @@
+{
+  "products": [
+    {"sku": "arv-tx3",  "price_chf": 449, "category": "avalanche-safety", "cert": "EN 300 718-1", "image": "arv-tx3",  "specs": ["antennas", "range", "battery", "weight"]},
+    {"sku": "arv-p240", "price_chf": 79,  "category": "avalanche-safety", "cert": null,          "image": "arv-p240", "specs": ["length", "diameter", "material", "weight"]},
+    {"sku": "arv-s1",   "price_chf": 89,  "category": "avalanche-safety", "cert": "UIAA 156",    "image": "arv-s1",   "specs": ["blade", "shaft", "material", "weight"]},
+    {"sku": "arv-ab30", "price_chf": 899, "category": "avalanche-safety", "cert": "EN 16716",    "image": "arv-ab30", "specs": ["volume", "system", "cartridge", "weight"]},
+    {"sku": "clb-k2",   "price_chf": 119, "category": "climbing",         "cert": "EN 12492",    "image": "clb-k2",   "specs": ["sizes", "shell", "vents", "weight"]},
+    {"sku": "clb-vf1",  "price_chf": 159, "category": "climbing",         "cert": "EN 958",      "image": "clb-vf1",  "specs": ["absorber", "connectors", "range", "weight"]},
+    {"sku": "clb-cr12", "price_chf": 189, "category": "climbing",         "cert": "EN 893",      "image": "clb-cr12", "specs": ["points", "binding", "material", "weight"]},
+    {"sku": "clb-r94",  "price_chf": 229, "category": "climbing",         "cert": "EN 892",      "image": "clb-r94",  "specs": ["diameter", "length", "falls", "weight"]}
+  ]
+}

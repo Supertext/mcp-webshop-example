@@ -1,0 +1,50 @@
+{% extends "_base.html" %}
+{% block content %}
+<article class="product">
+  <div class="product-image">
+    {% with p = product %}{% include '_product_image.html' %}{% endwith %}
+  </div>
+
+  <div class="product-detail">
+    <span class="sku">{{ product.sku }}</span>
+    <h1>{{ t(product.sku | product_key('name')) }}</h1>
+    <p class="tagline">{{ t(product.sku | product_key('tagline')) }}</p>
+
+    <div class="purchase">
+      <p class="price">CHF {{ product.price_chf }}</p>
+      <form class="add-to-cart" method="post" action="{{ prefix }}/cart/add">
+        <input type="hidden" name="sku" value="{{ product.sku }}">
+        <button type="submit">{{ t('cart.add') }}</button>
+      </form>
+    </div>
+
+    {{ notice(product.sku | product_key('short')) }}
+    <p class="short">{{ t(product.sku | product_key('short')) }}</p>
+    {{ notice(product.sku | product_key('long')) }}
+    <div class="long">{{ t(product.sku | product_key('long')) }}</div>
+
+    {% if product.cert_key %}
+      <p class="cert">{{ t('label.certified') }} {{ t(product.cert_key) }}</p>
+    {% endif %}
+
+    <table class="specs">
+      {% for name in product.spec_names %}
+        <tr><th>{{ t('label.spec.' ~ name) }}</th>
+            <td>{{ t('product.' ~ product.sku ~ '.spec.' ~ name) }}</td></tr>
+      {% endfor %}
+    </table>
+
+    <section class="safety">
+      <h2>{{ t('label.safety') }}</h2>
+      {{ notice(product.sku | product_key('safety_instructions')) }}
+      <div class="safety-body">{{ t(product.sku | product_key('safety_instructions')) }}</div>
+    </section>
+
+    <section class="care">
+      <h2>{{ t('label.care') }}</h2>
+      {{ notice(product.sku | product_key('care')) }}
+      <div>{{ t(product.sku | product_key('care')) }}</div>
+    </section>
+  </div>
+</article>
+{% endblock %}

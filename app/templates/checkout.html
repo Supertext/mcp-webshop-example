@@ -1,0 +1,64 @@
+{% extends "_base.html" %}
+{% block content %}
+<section class="checkout">
+  <h1>{{ t('checkout.title') }}</h1>
+
+  <form class="checkout-form" method="post" action="{{ prefix }}/checkout">
+    <p>
+      <label for="name">{{ t('checkout.field.name') }}</label>
+      <input type="text" id="name" name="name" required>
+    </p>
+    <p>
+      <label for="email">{{ t('checkout.field.email') }}</label>
+      <input type="text" id="email" name="email" required>
+    </p>
+    <p>
+      <label for="address">{{ t('checkout.field.address') }}</label>
+      <input type="text" id="address" name="address" required>
+    </p>
+    <p>
+      <label for="postcode">{{ t('checkout.field.postcode') }}</label>
+      <input type="text" id="postcode" name="postcode" required>
+    </p>
+    <p>
+      <label for="city">{{ t('checkout.field.city') }}</label>
+      <input type="text" id="city" name="city" required>
+    </p>
+
+    <fieldset>
+      <legend>{{ t('checkout.shipping') }}</legend>
+      <p>
+        <input type="radio" id="shipping-standard" name="shipping" value="standard" checked>
+        <label for="shipping-standard">{{ t('checkout.shipping.standard') }}</label>
+      </p>
+      <p>
+        <input type="radio" id="shipping-express" name="shipping" value="express">
+        <label for="shipping-express">{{ t('checkout.shipping.express') }}</label>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>{{ t('checkout.payment') }}</legend>
+      <p>
+        <label for="card">{{ t('checkout.field.card') }}</label>
+        <input type="text" id="card" name="card" autocomplete="off">
+      </p>
+    </fieldset>
+
+    <button type="submit">{{ t('checkout.submit') }}</button>
+  </form>
+
+  <aside class="order-summary">
+    <ul class="cart-lines">
+      {% for sku, qty in cart.items() %}
+        <li class="cart-line" data-sku="{{ sku }}" data-qty="{{ qty }}">
+          <span class="line-name">{{ t(sku | product_key('name')) }}</span>
+          <span class="line-qty">&times; {{ qty }}</span>
+          <span class="line-price">CHF {{ products[sku].price_chf }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="cart-total">{{ t('cart.total') }} CHF {{ total }}</p>
+  </aside>
+</section>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+{% block content %}
+<section class="cart">
+  <h1>{{ t('cart.title') }}</h1>
+
+  {% if not cart %}
+    <p class="cart-empty">{{ t('cart.empty') }}</p>
+  {% else %}
+    <div class="cart-layout">
+      <ul class="cart-lines">
+        {% for sku, qty in cart.items() %}
+          <li class="cart-line" data-sku="{{ sku }}" data-qty="{{ qty }}">
+            <span class="line-thumb">
+              <img src="/static/img/{{ products[sku].image }}.svg" alt="" width="88" height="66">
+            </span>
+            <span class="line-detail">
+              <span class="line-name">{{ t(sku | product_key('name')) }}</span>
+              <span class="sku">{{ sku }}</span>
+              <form class="remove-line" method="post" action="{{ prefix }}/cart/remove">
+                <input type="hidden" name="sku" value="{{ sku }}">
+                <button type="submit">{{ t('cart.remove') }}</button>
+              </form>
+            </span>
+            <span class="line-qty">&times; {{ qty }}</span>
+            <span class="line-price">CHF {{ products[sku].price_chf }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <aside class="cart-summary">
+        <p class="cart-total">{{ t('cart.total') }} CHF {{ total }}</p>
+        <a class="cta" href="{{ prefix }}/checkout">{{ t('cart.checkout') }}</a>
+      </aside>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}

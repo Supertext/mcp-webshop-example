@@ -1,0 +1,132 @@
+/* Design tokens — Firn Shop, from the Claude Design comp ("Firn Shop.dc.html").
+   Every property below is part of the token contract that components.css and
+   trust.css depend on: keep the names stable even when the values change.
+
+   The palette is cool and paper-like: near-white ground, deep ink text, a single
+   teal accent, and two dark bands (header rail and footer) for contrast. State
+   colours are NOT decorative — they are the workshop's argument, and they match
+   STATE_MARKERS in app/i18n.py one for one. */
+
+:root {
+  /* Colour: brand, surface, text, border */
+  --color-brand: #0F7A87;
+  --color-brand-strong: #0A5560;
+  --color-brand-ink: #ffffff;
+  --color-brand-wash: #EDF6F7;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F6F8F9;
+  --color-surface-sunk: #EAEFF1;
+  --color-ink: #16232B;
+  --color-ink-muted: #4A5D68;
+  /* darkened from the comp's #6E828D: at 13px that failed WCAG AA
+     (4.01:1); this clears 4.5:1 on both white cards and the paper ground */
+  --color-ink-faint: #61737E;
+  --color-border: #E3E9EB;
+  --color-border-strong: #DCE3E6;
+
+  /* Safety block — amber caution ground, light mode */
+  --color-caution-bg: #FFFCF5;
+  --color-caution-border: #EFDCB6;
+  --color-caution-ink: #7A4A0B;
+
+  /* Dark bands — footer, guide feature, trust overlay */
+  --color-dark: #0F1D23;
+  --color-dark-deep: #0B3038;
+  --color-dark-ink: #EAF1F3;
+  --color-dark-ink-muted: #B4C6CD;
+  --color-dark-rule: #33454F;
+  --color-dark-accent: #7FD4DE;
+
+  /* State colours — six tokens covering the eight resolved states
+     (withheld/fallback share --state-source; source/source_locked share --state-locked) */
+  --state-verified: #1B7F4B;
+  --state-machine:  #6B7280;
+  --state-pending:  #B45309;
+  --state-stale:    #C2410C;
+  --state-source:   #1D4ED8;
+  --state-locked:   #7E8B93;
+
+  /* Type — Chivo for display, IBM Plex Sans for body, IBM Plex Mono for
+     labels, SKUs and numerals. Faces are self-hosted in app/static/fonts/. */
+  --font-display: "Chivo", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.625rem;
+  --tracking-label: 0.14em;
+  --tracking-tight: -0.02em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows — soft and low, the comp leans on borders more than elevation */
+  --shadow-sm: 0 1px 2px rgba(16, 35, 43, 0.05);
+  --shadow-md: 0 1px 2px rgba(16, 35, 43, 0.04), 0 20px 48px -32px rgba(16, 35, 43, 0.5);
+  --shadow-lg: 0 1px 2px rgba(16, 35, 43, 0.05), 0 30px 70px -40px rgba(16, 35, 43, 0.6);
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: 2rem;
+
+  /* Breakpoints (informational — used via custom media where supported,
+     otherwise mirrored in components.css @media queries) */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand: #7FD4DE;
+    --color-brand-strong: #A8E4EB;
+    --color-brand-ink: #06232A;
+    --color-brand-wash: #10333B;
+    --color-surface: #10222A;
+    --color-surface-alt: #0B1A20;
+    --color-surface-sunk: #16303A;
+    --color-ink: #EAF1F3;
+    --color-ink-muted: #B4C6CD;
+    --color-ink-faint: #8FA4AD;
+    --color-border: #24404A;
+    --color-border-strong: #2E4C57;
+
+    --color-caution-bg: #2A1F0D;
+    --color-caution-border: #5C4718;
+    --color-caution-ink: #F5C084;
+
+    --color-dark: #081418;
+    --color-dark-deep: #06232A;
+    --color-dark-ink: #EAF1F3;
+    --color-dark-ink-muted: #B4C6CD;
+    --color-dark-rule: #33454F;
+    --color-dark-accent: #7FD4DE;
+
+    /* Lifted for contrast on dark ground — same six semantic slots.
+       Values taken from the comp's LHUE map. */
+    --state-verified: #63DFA0;
+    --state-machine:  #C3CFD8;
+    --state-pending:  #F5C084;
+    --state-stale:    #FBB08A;
+    --state-source:   #9FBCFF;
+    --state-locked:   #CBD5DA;
+  }
+}

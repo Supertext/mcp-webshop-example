@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+{% block content %}
+<section class="order">
+  <h1>{{ t('order.title') }}</h1>
+  <p>{{ t('order.thanks') }}</p>
+  <p class="order-number">{{ t('order.number') }} {{ order.id }}</p>
+
+  <ul class="cart-lines">
+    {% for sku, qty in order.cart.items() %}
+      <li class="cart-line" data-sku="{{ sku }}" data-qty="{{ qty }}">
+        <span class="line-name">{{ t(sku | product_key('name')) }}</span>
+        <span class="line-qty">&times; {{ qty }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="cart-total">{{ t('order.total') }} CHF {{ order.total }}</p>
+</section>
+{% endblock %}

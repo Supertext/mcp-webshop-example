@@ -1,0 +1,20 @@
+# Generated demo data
+data/analytics.sqlite
+data/analytics.sqlite-*
+app/static/img/*.svg
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+
+# Secrets — never committed
+.env
+

@@ -1,0 +1,68 @@
+/* Trust overlay. Ours, not the designer's — must survive any restyle.
+   State hues come from tokens.css; only the tinting mechanism lives here. */
+
+.s.trust {
+  background: color-mix(in srgb, var(--state-color, currentColor) 12%, transparent);
+  border-left: 2px solid var(--state-color, currentColor);
+  padding: 0 0.2em 0 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.s.trust .m {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62em;
+  letter-spacing: 0.06em;
+  margin-left: 0.25em;
+  opacity: 0.85;
+}
+
+.s.trust[data-state="verified"]      { --state-color: var(--state-verified); }
+.s.trust[data-state="machine"]       { --state-color: var(--state-machine); }
+.s.trust[data-state="pending"]       { --state-color: var(--state-pending); }
+.s.trust[data-state="stale"]         { --state-color: var(--state-stale); }
+.s.trust[data-state="withheld"]      { --state-color: var(--state-source); }
+.s.trust[data-state="fallback"]      { --state-color: var(--state-source); }
+.s.trust[data-state="source"]        { --state-color: var(--state-locked); }
+.s.trust[data-state="source_locked"] { --state-color: var(--state-locked); }
+
+/* The legend is a dark floating card so it reads over any page ground and
+   stays legible on a projector. Counts are the point — keep them large. */
+.trust-legend {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(11, 21, 25, 0.95);
+  color: #EAF1F3;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.42);
+  font-family: var(--font-mono, monospace);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+}
+
+@supports (backdrop-filter: blur(12px)) {
+  .trust-legend { backdrop-filter: blur(12px); }
+}
+
+.trust-legend b { font-weight: 600; }
+
+/* On the dark card the light-mode state hues lose contrast, so the legend
+   always uses the lifted variants regardless of the page's colour scheme.
+   These target the count spans in _base.html (id="c-<state>"), not the
+   data-state attributes used for inline tinting above. */
+.trust-legend #c-verified { color: #63DFA0; }
+.trust-legend #c-machine  { color: #C3CFD8; }
+.trust-legend #c-pending  { color: #F5C084; }
+.trust-legend #c-stale    { color: #FBB08A; }
+.trust-legend #c-en       { color: #9FBCFF; }
+
+@media (prefers-reduced-motion: reduce) {
+  .s.trust { transition: none; }
+}

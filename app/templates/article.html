@@ -1,0 +1,40 @@
+{% extends "_base.html" %}
+{% block content %}
+<div class="article-layout">
+  <article class="guide">
+  <h1>{{ t('guide.title') }}</h1>
+  {{ notice('guide.standfirst') }}
+  <p class="standfirst">{{ t('guide.standfirst') }}</p>
+
+  {% for i in range(1, 6) %}
+    <h2>{{ t('guide.h' ~ i) }}</h2>
+    {{ notice('guide.body' ~ i) }}
+    <div>{{ t('guide.body' ~ i) }}</div>
+    {% if i == 2 %}
+      {{ notice('guide.pullquote') }}
+      <blockquote>{{ t('guide.pullquote') }}</blockquote>
+    {% endif %}
+  {% endfor %}
+</article>
+
+  {# Related equipment: real catalogue entries, the comp's sidebar. #}
+  <aside class="article-aside">
+    <h2>{{ t('home.featured.title') }}</h2>
+    <ul>
+      {% for p in related %}
+        <li>
+          <a href="{{ prefix }}/p/{{ p.sku }}">
+            <span class="aside-thumb">
+              {% with sizes = '96px' %}{% include '_product_image.html' %}{% endwith %}
+            </span>
+            <span class="aside-detail">
+              <span class="aside-name">{{ t(p.sku | product_key('name')) }}</span>
+              <span class="price">CHF {{ p.price_chf }}</span>
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+</div>
+{% endblock %}

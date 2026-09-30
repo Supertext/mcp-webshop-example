@@ -1,0 +1,74 @@
+{% extends "_base.html" %}
+{% block title %}Analytics · Firn{% endblock %}
+{% block content %}
+<h1>Analytics — last 30 days</h1>
+
+{# Totals summed from the funnel rows already in context — no extra queries. #}
+{% set total_sessions = funnel | sum(attribute='sessions') %}
+{% set total_purchases = funnel | sum(attribute='purchases') %}
+{% set total_revenue = revenue | sum(attribute='revenue') %}
+<ul class="stat-tiles">
+  <li>
+    <span class="stat-label">Sessions</span>
+    <span class="stat-value">{{ '{:,}'.format(total_sessions) }}</span>
+  </li>
+  <li>
+    <span class="stat-label">Purchases</span>
+    <span class="stat-value">{{ '{:,}'.format(total_purchases) }}</span>
+  </li>
+  <li>
+    <span class="stat-label">Conversion</span>
+    <span class="stat-value">{{ '%.2f' % (100 * total_purchases / total_sessions) }}%</span>
+  </li>
+  <li>
+    <span class="stat-label">Revenue CHF</span>
+    <span class="stat-value">{{ '{:,.0f}'.format(total_revenue) }}</span>
+  </li>
+</ul>
+
+<section>
+  <h2>Sessions and conversion by visitor locale</h2>
+  <table>
+    <thead><tr><th>Locale</th><th>Sessions</th><th>Carts</th><th>Checkouts</th>
+      <th>Purchases</th><th>Conversion</th></tr></thead>
+    <tbody>
+      {% for row in funnel %}
+      <tr>
+        <td>{{ row['locale'] }}</td>
+        <td>{{ row['sessions'] }}</td>
+        <td>{{ row['carts'] }}</td>
+        <td>{{ row['checkouts'] }}</td>
+        <td>{{ row['purchases'] }}</td>
+        <td>{{ '%.2f' % (100 * row['purchases'] / row['sessions']) }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Top pages</h2>
+  <ul class="bars">
+    {% for row in paths %}
+    <li>
+      <span class="bar-label">{{ row['path'] }}</span>
+      <span class="bar" style="--w: {{ (100 * row['views'] / max_views) | round(1) }}%"></span>
+      <span class="bar-value">{{ row['views'] }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Revenue by locale</h2>
+  <table>
+    <thead><tr><th>Locale</th><th>Orders</th><th>Revenue CHF</th></tr></thead>
+    <tbody>
+      {% for row in revenue %}
+      <tr><td>{{ row['locale'] }}</td><td>{{ row['orders'] }}</td>
+        <td>{{ '%.0f' % row['revenue'] }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

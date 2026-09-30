@@ -1,0 +1,13 @@
+{#- Product imagery: a photograph where one exists, the generated glyph SVG
+    otherwise. Callers pass `p` (a Product) and optionally `sizes`.
+    No height attribute: source photos differ slightly in ratio, so CSS
+    (aspect-ratio + object-fit) enforces one shape instead. -#}
+{%- if p.has_photo -%}
+  <img class="is-photo" src="/static/img/photo/{{ p.sku }}-1200.jpg"
+       srcset="/static/img/photo/{{ p.sku }}-600.jpg 600w,
+               /static/img/photo/{{ p.sku }}-1200.jpg 1200w"
+       sizes="{{ sizes | default('(max-width: 768px) 100vw, 620px') }}"
+       alt="" loading="lazy" decoding="async">
+{%- else -%}
+  <img class="is-glyph" src="/static/img/{{ p.image }}.svg" alt="" loading="lazy">
+{%- endif -%}

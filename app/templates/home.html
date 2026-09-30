@@ -1,0 +1,91 @@
+{% extends "_base.html" %}
+{% block content %}
+<section class="hero">
+  {# Contour lines, straight from the design comp. Decorative: aria-hidden. #}
+  <svg class="hero-terrain" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.1">
+      <path d="M-60 470C120 400 240 470 380 420S620 250 780 300s260 40 420-30"/>
+      <path d="M-60 522C130 450 250 520 390 468S630 296 790 348s250 42 410-28"/>
+      <path d="M-60 574C140 500 262 572 400 518S640 344 800 398s240 44 400-26"/>
+      <path d="M-60 628C150 552 274 626 412 570S650 394 810 450s230 46 390-24"/>
+      <path d="M-60 684C160 606 286 682 424 624S660 446 820 504s220 48 380-22"/>
+      <path d="M100 236C230 196 330 232 430 192s160-98 280-72" stroke-dasharray="4 8"/>
+    </g>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>{{ t('home.hero.title') }}</h1>
+      <p>{{ t('home.hero.sub') }}</p>
+      <a class="cta" href="{{ prefix }}/c/avalanche-safety">{{ t('home.hero.cta') }}</a>
+    </div>
+
+    {# Facts panel: certifications of the featured range — real catalogue data,
+       and a different cut from the spotlight's spec chips below. #}
+    <dl class="hero-facts">
+      {% for p in [spotlight] + featured %}
+        {% if p.cert_key %}
+          <dt>{{ t(p.sku | product_key('name')) }}</dt>
+          <dd>{{ t('label.certified') }} {{ t(p.cert_key) }}</dd>
+        {% endif %}
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+<ul class="value-props">
+  <li>
+    <h2>{{ t('home.prop1.title') }}</h2>
+    {{ notice('home.prop1.body') }}
+    <p>{{ t('home.prop1.body') }}</p>
+  </li>
+  <li>
+    <h2>{{ t('home.prop2.title') }}</h2>
+    {{ notice('home.prop2.body') }}
+    <p>{{ t('home.prop2.body') }}</p>
+  </li>
+  <li>
+    <h2>{{ t('home.prop3.title') }}</h2>
+    {{ notice('home.prop3.body') }}
+    <p>{{ t('home.prop3.body') }}</p>
+  </li>
+</ul>
+
+<section class="featured">
+  <h2>{{ t('home.featured.title') }}</h2>
+
+  {# Spotlight: the lead product, given the comp's full-width feature treatment.
+     Chips are real spec values, not marketing copy. #}
+  <a class="spotlight" href="{{ prefix }}/p/{{ spotlight.sku }}">
+    <div class="spotlight-ground">
+      {% with p = spotlight, sizes = '(max-width: 1024px) 100vw, 640px' %}
+        {% include '_product_image.html' %}
+      {% endwith %}
+      <span class="badge">{{ spotlight.sku }}</span>
+    </div>
+    <div class="spotlight-detail">
+      <h3>{{ t(spotlight.sku | product_key('name')) }}</h3>
+      <p class="tagline">{{ t(spotlight.sku | product_key('tagline')) }}</p>
+      <ul class="chips">
+        {% for name in spotlight.spec_names[:3] %}
+          <li>{{ t('label.spec.' ~ name) }} {{ t('product.' ~ spotlight.sku ~ '.spec.' ~ name) }}</li>
+        {% endfor %}
+      </ul>
+      <p class="spotlight-price">CHF {{ spotlight.price_chf }}</p>
+    </div>
+  </a>
+
+  <ul class="product-grid">
+    {% for p in featured %}
+      {% include '_product_card.html' %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="guide-teaser">
+  <h2>{{ t('home.guide.title') }}</h2>
+  {{ notice('home.guide.body') }}
+  <p>{{ t('home.guide.body') }}</p>
+  <a href="{{ prefix }}/guide/avalanche-basics">{{ t('nav.guide') }}</a>
+</section>
+{% endblock %}

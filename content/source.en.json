@@ -1,0 +1,1528 @@
+{
+  "schema_version": 1,
+  "default_locale": "en",
+  "strings": {
+    "nav.avalanche": {
+      "text": "Avalanche Safety",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "cart.add": {
+      "text": "Add to cart",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.safety_instructions": {
+      "text": "Before every departure, perform a group transceiver check. Switch every unit to send, walk twenty metres from the group, then switch to search and confirm each unit registers. Repeat with your own unit checked by a partner. A transceiver that has not been checked is not a transceiver. Confirm the battery indicator shows above 50 percent before departure — a unit that fails mid-tour cannot be recharged in the field. Keep phones and other transmitting devices at least twenty centimetres from the unit in send mode, since nearby interference can mask a genuine signal during a search. After any fall, impact, or submersion, have the unit inspected before its next use; a cracked housing or a switch that no longer clicks positively is a reason to retire it immediately.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.cert": {
+      "text": "EN 300 718-1",
+      "class": "certification",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": false
+    },
+    "legal.shipping.body": {
+      "text": "The Firn Airbag 30 ships with a compressed gas cartridge classified as dangerous goods under ADR. Air freight is not available. Cartridges are shipped by road within Switzerland and Liechtenstein only, and cannot be returned once the seal is broken.\n\nAll other orders ship by road or by air courier depending on destination and are not subject to the same restriction. Orders to Swiss and Liechtenstein addresses placed before 14:00 CET on a business day leave our Zurich warehouse the same day and typically arrive within one to two business days. Orders to Germany, France, Austria and Italy are dispatched by courier and typically arrive within three to five business days; remote or mountain addresses in these countries can take longer, and we will contact you if a delivery estimate needs to be revised.\n\nSwitzerland and Liechtenstein form a joint customs territory outside the European Union. Orders shipped from our Zurich warehouse to EU addresses are exported goods and may be subject to import VAT and customs clearance on arrival, charged by the courier or the destination country's customs authority rather than by Firn. We declare the correct commodity value on the shipping documents; asking us to under-declare a package's value is not something we will do, for any destination.\n\nEvery order ships with a tracking number, sent by email once the package leaves the warehouse, and can be followed through the courier's own tracking page. Packages are boxed to survive normal transit handling; items with rigid outer shells, such as helmets, ship in their own box rather than only in branded packaging, since the branded packaging is not structural.\n\nInspect a package on arrival before signing for it if the outer box shows visible damage; noting the damage with the courier at the point of delivery makes any claim significantly faster to resolve than reporting it afterward. If an item arrives damaged with no visible sign on the packaging, contact us within 48 hours with photographs of the item and the packaging together, and we will arrange a replacement or a return at our cost.\n\nAddress changes can be made up until the order leaves the warehouse; once a tracking number has been issued, the package is in the courier's system and a redirection request has to go through the courier directly, which is not always possible depending on the service level. We cannot ship to a PO box for orders containing the Airbag 30, since a compressed gas cartridge requires a signature and a street address under the dangerous-goods regulation referenced above.",
+      "class": "legal",
+      "surfaces": [
+        "/legal/shipping"
+      ],
+      "translatable": true
+    },
+    "nav.climbing": {
+      "text": "Climbing & Mountaineering",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "nav.guide": {
+      "text": "Avalanche Basics",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "nav.cart": {
+      "text": "Cart",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "footer.terms": {
+      "text": "Terms of Service",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "footer.returns": {
+      "text": "Returns",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "footer.warranty": {
+      "text": "Warranty",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "footer.privacy": {
+      "text": "Privacy Policy",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "footer.shipping": {
+      "text": "Shipping",
+      "class": "ui_chrome",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    },
+    "notice.withheld.title": {
+      "text": "Available in English only",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*",
+        "/legal/*"
+      ],
+      "translatable": true
+    },
+    "notice.withheld.body": {
+      "text": "This section requires professional verification before it can be published in this language.",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*",
+        "/legal/*"
+      ],
+      "translatable": true
+    },
+    "label.certified": {
+      "text": "Certified to",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.safety": {
+      "text": "Safety instructions",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.care": {
+      "text": "Care and maintenance",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "home.hero.title": {
+      "text": "Equipment you can verify, not just trust",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.hero.sub": {
+      "text": "Firn builds avalanche safety and climbing equipment for people who read the certification before the description.",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.hero.cta": {
+      "text": "Shop avalanche safety",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.prop1.title": {
+      "text": "Certified, not just labelled",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.prop1.body": {
+      "text": "Every product page states the exact standard a product is certified against, and links the certification code rather than paraphrasing it.",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.prop2.title": {
+      "text": "Instructions that assume nothing",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.prop2.body": {
+      "text": "Safety and care instructions are written by people who use this equipment, and checked by a second person before they are published in any language.",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.prop3.title": {
+      "text": "Shipped from Zurich",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.prop3.body": {
+      "text": "Orders placed before 2 p.m. leave our Zurich warehouse the same day, by road within Switzerland and Liechtenstein, and by courier across the rest of Europe.",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.featured.title": {
+      "text": "Featured equipment",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.guide.title": {
+      "text": "Start with the basics",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "home.guide.body": {
+      "text": "Our avalanche safety guide covers the group-check routine, how to read a transceiver's search phase, and what a probe strike actually feels like before you dig.",
+      "class": "marketing",
+      "surfaces": [
+        "/"
+      ],
+      "translatable": true
+    },
+    "category.avalanche-safety.title": {
+      "text": "Avalanche Safety",
+      "class": "marketing",
+      "surfaces": [
+        "/c/avalanche-safety"
+      ],
+      "translatable": true
+    },
+    "category.avalanche-safety.intro": {
+      "text": "Transceivers, probes, shovels and airbag packs — the equipment a companion rescue depends on, and nothing that only looks the part.",
+      "class": "marketing",
+      "surfaces": [
+        "/c/avalanche-safety"
+      ],
+      "translatable": true
+    },
+    "category.climbing.title": {
+      "text": "Climbing & Mountaineering",
+      "class": "marketing",
+      "surfaces": [
+        "/c/climbing"
+      ],
+      "translatable": true
+    },
+    "category.climbing.intro": {
+      "text": "Helmets, via ferrata sets, crampons and rope for terrain where the equipment is load-bearing, not optional.",
+      "class": "marketing",
+      "surfaces": [
+        "/c/climbing"
+      ],
+      "translatable": true
+    },
+    "guide.title": {
+      "text": "Avalanche Basics: Understanding the Companion Rescue Kit",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.standfirst": {
+      "text": "A transceiver, a probe and a shovel are the minimum companion rescue kit for backcountry travel. This guide covers what each one does, how they work together as a system, and what to look for when you buy them — not how to use them under pressure, which is what a certified course is for.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.h1": {
+      "text": "Why three separate pieces of equipment",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.body1": {
+      "text": "A transceiver, a probe and a shovel exist as three separate tools rather than a single device because a companion rescue happens in three genuinely different phases: finding a burial's rough location, confirming its exact point and depth, and moving enough snow to reach the person. A device that tried to do all three would be worse at each of them than a purpose-built tool, which is why every certified avalanche course still teaches the same three-part kit rather than a single gadget.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.h2": {
+      "text": "How survival time shapes the numbers",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.body2": {
+      "text": "Companion rescue statistics are unambiguous about one thing: survival odds fall sharply as burial time passes roughly fifteen minutes, well before an organised rescue team can usually reach a backcountry location. That gap is exactly why every member of a group needs to carry a transceiver, probe and shovel, and why the kit has to already be in a pack rather than left in a car — the rescue that matters is almost always the one performed by whoever was standing nearby.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.h3": {
+      "text": "Choosing a transceiver",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.body3": {
+      "text": "Look for three antennas rather than two — a third antenna keeps the direction reading stable when a buried unit ends up rotated, which is common rather than exceptional. A simple, uncluttered display with no menu to navigate matters more than extra features: an actual search is not the moment to be learning an unfamiliar interface. Battery life should comfortably cover a multi-day tour, and compatibility with the current international frequency standard is not optional — an older or non-compliant unit may not be found by anyone else's device.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.h4": {
+      "text": "Choosing a probe and a shovel",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.body4": {
+      "text": "A probe needs to be long enough for the terrain — 240 cm covers the great majority of backcountry burials, though a deeper snowpack calls for more. The locking mechanism matters more than the material a probe is made from: one that flexes or slips under repeated pressure is not useful regardless of what it is built from. For a shovel, blade area matters more than weight, since avalanche debris sets firm within minutes and a small blade moves too little snow per stroke to be effective against it; a shaft that converts to a hoe position adds real capability for a small weight cost.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.h5": {
+      "text": "Training is the part equipment cannot replace",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.body5": {
+      "text": "Owning a transceiver, probe and shovel is necessary but not sufficient — the skills to use them under time pressure are built through practice, not by reading a product page. A certified avalanche safety course teaches the search and rescue technique that actually makes a companion rescue kit effective, in a supervised setting where a first attempt is not also a real emergency. If you are heading into avalanche terrain without that training, arranging it should come before the next tour, not after.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "guide.pullquote": {
+      "text": "A transceiver finds a direction. A probe finds a point. A shovel buys time. None of them teach you how to use the other two — a course does.",
+      "class": "marketing",
+      "surfaces": [
+        "/guide/avalanche-basics"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.name": {
+      "text": "Firn TX3 Digital Transceiver",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/avalanche-safety",
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.tagline": {
+      "text": "Three antennas, fifty metres, no second-guessing.",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/avalanche-safety",
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.short": {
+      "text": "A three-antenna digital transceiver with a linear search strip and a fixed 60-metre range display, built for groups that need consistent readings under stress.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.long": {
+      "text": "The TX3 uses three processor-controlled antennas to hold a stable direction reading even when a buried unit is rotated or partially shielded by terrain. The display updates on a fixed one-second cycle and shows distance in metres alongside a directional arrow, without smoothing that could mask a genuine change in signal.\n\nA mechanical toggle switches between send and search; there is no touchscreen and no menu to navigate under stress. The housing is rated to IP4X and the harness carries the unit across the chest, on the outside of a jacket, exactly as specified in the group-check procedure.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.care": {
+      "text": "Store the TX3 with the battery removed if it will sit unused for more than a season; lithium cells left inside for years can corrode the contacts. Wipe the housing with a damp cloth only — solvents attack the seals around the antenna window. Keep the harness away from sharp buckles that can abrade the strap, and replace it if the stitching shows wear. Do not open the housing; there are no user-serviceable parts inside, and doing so voids the certification.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.spec.antennas": {
+      "text": "3",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.spec.range": {
+      "text": "50 m search strip width",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.spec.battery": {
+      "text": "300 h transmit, 50 h search",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-tx3.spec.weight": {
+      "text": "220 g",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-tx3"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.name": {
+      "text": "Firn P240 Probe, 240 cm",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/avalanche-safety",
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.tagline": {
+      "text": "240 centimetres, folds to 40, no certificate needed.",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/avalanche-safety",
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.short": {
+      "text": "An aluminium avalanche probe that assembles in one motion and locks under tension, built to confirm a burial point once a transceiver search has narrowed the search area.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.long": {
+      "text": "The P240 assembles from nine aluminium sections joined by an internal cord under constant tension, so a single pull locks the full length in one motion rather than section by section. A cam lock at the top seats with an audible click and holds under the repeated probing of a fine-search grid.\n\nDepth markings are printed at ten-centimetre intervals so a burial depth can be read and relayed to the rest of the group without withdrawing the probe. The tip is solid aluminium rather than a hollow taper, which transmits more feedback through the shaft when it strikes a body rather than a rock or a branch.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.care": {
+      "text": "Rinse the sections with fresh water after use in wet or salted conditions and dry them before folding the probe away; damp aluminium sections can seize inside each other. Check the internal cord for fraying once a season — a probe that will not lock under tension is not reliable in a fine search. Store it fully assembled and slightly loose rather than under tension for long periods.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.safety_instructions": {
+      "text": "Before every departure, confirm the cam lock holds under a firm push against a hard surface; a probe that collapses under load will not register a strike reliably and cannot be trusted in a fine search. Always probe perpendicular to the slope surface, not vertically, since a burial rarely sits directly beneath the point where the lowest transceiver reading was taken. A single row of probe strikes that finds nothing does not clear an area — space rows no more than twenty-five centimetres apart and continue systematically outward from the transceiver's lowest reading before concluding the search point was wrong. Leave the probe in place once you get a strike; withdrawing it to check again costs time the group does not have.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.spec.length": {
+      "text": "240 cm assembled, 40 cm folded",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.spec.diameter": {
+      "text": "11 mm",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.spec.material": {
+      "text": "7075 aluminium",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-p240.spec.weight": {
+      "text": "240 g",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-p240"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.name": {
+      "text": "Firn S1 Alloy Shovel",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/avalanche-safety",
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.tagline": {
+      "text": "A blade built to move snow, not just carry a logo.",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/avalanche-safety",
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.short": {
+      "text": "A T-grip alloy shovel with a flat, oversized blade for moving avalanche debris quickly, and a telescoping shaft that converts to a hoe position for probing and digging pits.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.long": {
+      "text": "Avalanche debris sets hard within minutes, and a shovel's blade area matters more than its weight once that happens. The S1's blade is flat rather than scooped, so it can be driven into set debris and used to chop as well as lift, and it is large enough to move a meaningful volume of snow per stroke without becoming unwieldy to swing.\n\nThe shaft telescopes and the blade can be rotated ninety degrees to work as a hoe, which is faster than a straight shovel when clearing a step for a pit wall or breaking up blocks of set debris. The T-grip is shaped for use with gloves on and does not rely on a smooth ergonomic profile that a bare hand would need.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.care": {
+      "text": "Dry the blade before storage; alloy shovels left wet develop a white oxide film that does not affect strength but roughens the surface enough to slow digging. Check the telescoping lock each season — grit inside the shaft collar is the usual cause of a lock that no longer holds under load. Do not use the shaft as a lever against rock; it is designed to flex under snow load, not to pry.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.safety_instructions": {
+      "text": "Once a probe strike is confirmed, dig immediately rather than pausing to discuss strategy — every second spent deciding is a second not spent excavating. Position the first digger roughly one and a half probe-lengths downhill of the strike and clear a ramp uphill, rotating diggers every few minutes, since digging through set avalanche debris is far more exhausting than digging fresh snow. Keep the blade in its straight configuration for the initial approach and switch to the hoe position only once you are close enough to the victim that you are clearing as much by hand as by blade, to avoid striking a person directly. Do not use the shaft as a probe substitute; it is not rated for that repeated point loading.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.cert": {
+      "text": "UIAA 156",
+      "class": "certification",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": false
+    },
+    "product.arv-s1.spec.blade": {
+      "text": "780 cm², flat profile",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.spec.shaft": {
+      "text": "telescopes 55–65 cm",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.spec.material": {
+      "text": "7075 aluminium T6",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-s1.spec.weight": {
+      "text": "620 g",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-s1"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.name": {
+      "text": "Firn Airbag 30 Backpack",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/avalanche-safety",
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.tagline": {
+      "text": "Thirty litres, one cartridge, one pull.",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/avalanche-safety",
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.short": {
+      "text": "A 30-litre avalanche airbag pack with a mechanical trigger and a refillable compressed-air cartridge, sized for a day tour with room for the group's shared kit.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.long": {
+      "text": "The trigger is a mechanical handle rather than an electronic pull cord, so it works without batteries and without a pairing step before each tour. Pulling it fires a compressed-air cartridge through a venturi valve that draws in ambient air at roughly five times the cartridge's stored volume, inflating a single 150-litre airbag across the top and sides of the pack in under three seconds.\n\nThe main compartment holds 30 litres and separates from the airbag system, so the pack can be repacked or the harness adjusted without disturbing the trigger mechanism. A diagonal strap secures a shovel and probe on the outside, and a dedicated sleeve on the back panel keeps the cartridge accessible without opening the main compartment.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.care": {
+      "text": "After any deployment, have the cartridge weighed or pressure-checked before refilling — a partially discharged cartridge will not inflate the airbag fully on a second pull. Refill only at a station rated for the cartridge's pressure class; overfilling by even a small margin can rupture the seal. Fold the airbag loosely rather than tightly when repacking it, and air it out fully after use in wet snow before storing the pack for the season.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.safety_instructions": {
+      "text": "Check the trigger handle is seated in its housing and the cartridge is full before every departure; a half-turn loose cartridge will not seal under pressure and will not inflate the bag. Practise the pull with the safety pin in place at the start of the season so the motion is automatic under stress — the trigger requires a firm, continuous pull, not a tap. Once deployed, a cartridge must be professionally refilled or exchanged before the next tour; never travel with a partially discharged cartridge believing it still has a full charge. Carrying the pack through airport security requires the cartridge to be removed and packed separately, or left at home, since a pressurised cartridge is classified as dangerous goods for air transport.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.cert": {
+      "text": "EN 16716",
+      "class": "certification",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": false
+    },
+    "product.arv-ab30.spec.volume": {
+      "text": "30 L pack, 150 L airbag",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.spec.system": {
+      "text": "mechanical trigger, venturi valve",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.spec.cartridge": {
+      "text": "300 bar carbon-wrapped, refillable",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.arv-ab30.spec.weight": {
+      "text": "2.4 kg without cartridge",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/arv-ab30"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.name": {
+      "text": "Firn K2 Helmet",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/climbing",
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.tagline": {
+      "text": "One shell, five sizes, no half-measures on fit.",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/climbing",
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.short": {
+      "text": "An in-mould climbing and mountaineering helmet with continuous foam coverage and a rear dial for fine adjustment, sized to fit a wide range of head shapes without additional padding.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.long": {
+      "text": "The shell is moulded directly onto the foam liner rather than fixed to it afterwards with adhesive, which lets the foam run in one continuous piece from the brow to the back of the head instead of being interrupted by a hard outer cage. This keeps the helmet light without opening gaps in coverage over the temples, a common weak point in hybrid-shell designs.\n\nFit is set with a rear dial rather than a fixed-size shell, and the range covers 54 to 61 centimetres across two shell sizes, so most adult head shapes are covered without buying a different model. Four fixed clip points and two sliding points hold a headlamp without needing an additional strap.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.care": {
+      "text": "Wipe the shell with mild soap and water; solvents and adhesive residue from stickers can craze the polycarbonate over time and are not visible until the shell is stressed. Store the helmet away from direct sun and away from the boot of a car in summer, where cabin temperatures can soften the foam liner. Do not sit on the helmet or pack heavy items on top of it in a bag — the foam is designed to absorb one sharp impact, not sustained low-level pressure.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.safety_instructions": {
+      "text": "Retire the helmet after any impact hard enough to leave a visible dent, crack, or a shell that no longer sits flush against the liner, even if the outer surface looks intact — the foam liner crushes to absorb energy and does not recover. Inspect the shell each season for hairline cracks, especially around the vents and the clip points, and check that the buckle still locks under load before every use. UV and heat degrade the shell over years even without impact; retire the helmet ten years from its date of manufacture regardless of visible condition. Do not modify the shell by drilling additional holes for accessories; this removes material from a structure engineered at a specific thickness.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.cert": {
+      "text": "EN 12492",
+      "class": "certification",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": false
+    },
+    "product.clb-k2.spec.sizes": {
+      "text": "54–61 cm, two shells",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.spec.shell": {
+      "text": "in-mould polycarbonate over EPS foam",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.spec.vents": {
+      "text": "10, fixed",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-k2.spec.weight": {
+      "text": "320 g (size M)",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-k2"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.name": {
+      "text": "Firn Via Ferrata Set",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/climbing",
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.tagline": {
+      "text": "An energy absorber sized for a fall, not a shrug.",
+      "class": "product_prose",
+      "surfaces": [
+        "/",
+        "/c/climbing",
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.short": {
+      "text": "A via ferrata lanyard set with a webbing energy absorber and two captive karabiners, designed to bring a fall to a stop within a survivable deceleration distance rather than at the anchor.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.long": {
+      "text": "A fall on a via ferrata is arrested by tearing a folded length of webbing stitched inside the absorber housing rather than by the rope stretching, since the steel cable route offers almost no give of its own. The stitching tears progressively under load, extending the stopping distance and keeping the peak force on the climber below roughly six kilonewtons — the threshold the standard sets for a fall a body can absorb without serious injury.\n\nThe two arms end in captive-eye karabiners that cannot be removed from the lanyard, so there is no way to clip in with the wrong connector or lose one mid-route. The Y-shaped design lets one arm stay clipped to the cable while the other moves past an anchor point, which is what keeps the climber attached at every point along the route.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.care": {
+      "text": "Inspect the stitching on the absorber housing before each season; a housing that has begun to fray or has visibly shortened has likely arrested a fall, even a small one, and must be retired regardless of how the fall felt. Keep the karabiners free of grit — a gate that does not close fully under its own spring is no longer reliable. Store the set coiled loosely rather than folded at the housing, since a sharp permanent crease in the webbing can weaken it in the same place repeatedly.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.safety_instructions": {
+      "text": "Retire the set immediately after any fall it has arrested, even one that felt minor — the torn stitching inside the absorber housing does not reset and a second fall on a used absorber will not be cushioned the same way. Retire it after ten years from the date of manufacture, or five years of regular use, whichever comes first, regardless of visible condition, since the webbing degrades with UV exposure and flexing even when stored. Before each route, check that both karabiner gates close and lock under their own spring without sticking, and that the absorber housing shows no fraying, discolouration, or a stitched length that looks shorter than when new. Never clip the lanyard arms to each other or to your harness's belay loop as a shortcut.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.cert": {
+      "text": "EN 958",
+      "class": "certification",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": false
+    },
+    "product.clb-vf1.spec.absorber": {
+      "text": "webbing tear-away, arrests to 6 kN",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.spec.connectors": {
+      "text": "two captive-eye karabiners",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.spec.range": {
+      "text": "lanyard arms 55–110 cm",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-vf1.spec.weight": {
+      "text": "450 g",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-vf1"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.name": {
+      "text": "Firn 12-Point Crampons",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/climbing",
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.tagline": {
+      "text": "Twelve points, one binding system, boots that actually fit.",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/climbing",
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.short": {
+      "text": "Steel twelve-point crampons with a semi-automatic binding, front points suited to snow and moderate ice, and a compatibility range that covers most B2 and B3 boots.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.long": {
+      "text": "The binding pairs a wire toe bail with a heel lever, which needs a boot with both a front welt and a rear groove — the semi-automatic category, marked B2 or B3 on most mountaineering boots. Crampons fitted to a boot without the matching welt will not seat securely regardless of how tightly the straps are drawn, so boot and crampon compatibility has to be checked before it matters on route.\n\nTwelve points are arranged with two horizontal front points for kicking into snow and moderate ice, and ten secondary points beneath the boot for traction on mixed and rocky ground. The linking bar between front and rear sections adjusts without tools, and antibott plates are fitted as standard to shed snowballing underfoot.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.care": {
+      "text": "Dry the crampons fully before storing them; steel points left damp in a pack will develop surface rust within days, which dulls them faster than normal use. Sharpen the front points with a flat file along their existing bevel rather than rounding a new edge — an incorrect bevel angle reduces bite on hard snow. Check the linking bar bolt for tightness each outing; a loose bar changes the crampon's length under load and can walk itself further loose.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.safety_instructions": {
+      "text": "Fit the crampons to the actual boots you will wear before the first outing, not to a similar pair — welt shape varies enough between models that a crampon seated well on one B2 boot can sit loose on another. Tighten the heel lever and straps fully and recheck them after the first few minutes of walking, since new webbing settles and a binding that felt secure at the trailhead can loosen underfoot. Inspect the front points before each use for a point that has bent or a linking bar bolt that has backed out; either can cause a sudden loss of purchase on hard snow. Never walk in crampons without gaiters or boots that keep loose clothing clear of the points — a caught point is the most common cause of a fall while cramponed.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.cert": {
+      "text": "EN 893",
+      "class": "certification",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": false
+    },
+    "product.clb-cr12.spec.points": {
+      "text": "12, two horizontal front points",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.spec.binding": {
+      "text": "semi-automatic, heel lever + toe bail",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.spec.material": {
+      "text": "hardened steel",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-cr12.spec.weight": {
+      "text": "980 g per pair",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-cr12"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.name": {
+      "text": "Firn 9.4 mm Dynamic Rope, 60 m",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/climbing",
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.tagline": {
+      "text": "9.4 millimetres, rated for the falls that matter.",
+      "class": "product_prose",
+      "surfaces": [
+        "/c/climbing",
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.short": {
+      "text": "A 60-metre single dynamic rope at 9.4 mm, dry-treated along its full length, with a fall rating built for regular multi-pitch use rather than a single redpoint attempt.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.long": {
+      "text": "The sheath is woven at a higher pick count than a typical single rope, which increases abrasion resistance over repeated pitches at some cost in weight — a reasonable trade for a rope that will see a full multi-pitch route rather than one attempt at a single line. The core and sheath are both treated for water resistance along the full length, not just at the ends, so performance does not fall away partway through a wet pitch.\n\nAn eight-fall rating under the single-rope test gives working margin for a rope used across a season of top-roping and lead falls rather than retired after the first hard whipper. Middle marking is dyed into the sheath rather than printed, so it does not wear off with repeated rappels through the same section.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.care": {
+      "text": "Uncoil the rope fully before its first use and flake it rather than pulling it directly from a tight coil, or it will hold a persistent twist for its early life. Wash it by hand in cool water with a rope-specific cleaner if it picks up dirt or salt; standard detergent strips the dry treatment. Store it out of direct sunlight and away from solvents, battery acid, and vehicle exhaust — a rope can be chemically damaged with no visible mark and no way to detect it by inspection.",
+      "class": "product_prose",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.safety_instructions": {
+      "text": "Inspect the full length before every session by running it through your hands, feeling for flat spots, soft spots, or a sheath that moves independently of the core — any of these means the rope should be retired regardless of its fall count. Retire a rope after a severe fall, a long fall with a heavy factor, or contact with a sharp edge under load, even if no damage is visible; internal core damage does not always show at the sheath. In regular weekend use, retire the rope after three to four years; in daily use, after one. Keep a rope log noting falls and heavy use so its history is not left to memory alone.",
+      "class": "safety_critical",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.cert": {
+      "text": "EN 892",
+      "class": "certification",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": false
+    },
+    "product.clb-r94.spec.diameter": {
+      "text": "9.4 mm",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.spec.length": {
+      "text": "60 m",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.spec.falls": {
+      "text": "rated to 8 UIAA falls",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "product.clb-r94.spec.weight": {
+      "text": "64 g/m",
+      "class": "product_spec",
+      "surfaces": [
+        "/p/clb-r94"
+      ],
+      "translatable": true
+    },
+    "label.spec.antennas": {
+      "text": "Antennas",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.range": {
+      "text": "Range",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.battery": {
+      "text": "Battery life",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.weight": {
+      "text": "Weight",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.length": {
+      "text": "Length",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.diameter": {
+      "text": "Diameter",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.material": {
+      "text": "Material",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.blade": {
+      "text": "Blade",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.shaft": {
+      "text": "Shaft",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.volume": {
+      "text": "Volume",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.system": {
+      "text": "Trigger system",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.cartridge": {
+      "text": "Cartridge",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.sizes": {
+      "text": "Head circumference",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.shell": {
+      "text": "Shell construction",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.vents": {
+      "text": "Vents",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.absorber": {
+      "text": "Energy absorber",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.connectors": {
+      "text": "Connectors",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.points": {
+      "text": "Points",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.binding": {
+      "text": "Binding",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "label.spec.falls": {
+      "text": "Fall rating",
+      "class": "ui_chrome",
+      "surfaces": [
+        "/p/*"
+      ],
+      "translatable": true
+    },
+    "legal.terms.title": {
+      "text": "Terms of Service",
+      "class": "legal",
+      "surfaces": [
+        "/legal/terms"
+      ],
+      "translatable": true
+    },
+    "legal.terms.body": {
+      "text": "These terms govern purchases made through firn.example and apply to any order placed by a private individual or a business for personal or professional use of Firn equipment. By placing an order you confirm that the information you provide is accurate and that you are authorised to use the payment method given at checkout.\n\nPrices shown are in Swiss francs and include Swiss value-added tax where applicable; shipments to other countries may be subject to import duties and taxes charged separately by the destination country, as described in our shipping terms. We reserve the right to correct a listed price before an order is confirmed if it was displayed in error, and we will contact you before charging a corrected amount.\n\nA contract of sale is formed when we send an order confirmation email, not when the order is placed; until that confirmation is sent, we may decline an order for any reason, including stock availability or a pricing error. Once confirmed, an order can be amended or cancelled only before it has been dispatched from our warehouse; contact customer service as soon as possible if you need to change an order.\n\nProduct descriptions, specifications and certification codes are maintained to match the current production run of each item; where a certification code changes between production runs, the code shown on your order confirmation is the one that applies to the unit shipped to you. We are not liable for the misuse of equipment outside the conditions described in its safety instructions, and nothing in these terms limits your statutory rights as a consumer under Swiss law.\n\nThese terms are governed by Swiss law. Any dispute arising from a purchase that cannot be resolved directly with our customer service team falls under the jurisdiction of the courts of Zurich, without prejudice to any mandatory consumer-protection venue that applies in your country of residence. If any individual clause of these terms is found unenforceable, the remaining clauses continue to apply in full.\n\nProduct photography, the Firn name and wordmark, and the text of product pages and guides on this site remain the property of Firn or its licensors. You may not reproduce, resell, or otherwise use this material commercially without written permission; quoting a safety instruction or a certification code for a review, a course, or a personal safety reference is expressly permitted. Machine-translated or professionally verified text remains subject to these same terms regardless of the language it is displayed in.",
+      "class": "legal",
+      "surfaces": [
+        "/legal/terms"
+      ],
+      "translatable": true
+    },
+    "legal.returns.title": {
+      "text": "Returns",
+      "class": "legal",
+      "surfaces": [
+        "/legal/returns"
+      ],
+      "translatable": true
+    },
+    "legal.returns.body": {
+      "text": "Unused equipment can be returned within 30 days of delivery for a refund of the purchase price, provided it is returned in its original packaging with all tags, manuals and accessories included. We recommend trying on helmets and harness-type equipment indoors on a clean surface before removing any tags, since equipment that shows signs of outdoor use cannot be accepted as a return.\n\nSome items cannot be returned once used or opened, for reasons of hygiene or safety rather than as a matter of policy: this includes the compressed gas cartridge for the Airbag 30 once its seal is broken, described further in our shipping terms, and any item that has been fitted with aftermarket parts not supplied by Firn. Ropes that have been uncoiled and flaked for use, even briefly, cannot be returned, since rope condition cannot be verified from the outside once it has left its factory coil.\n\nTo start a return, contact customer service with your order number and the reason for the return; we will issue a return authorisation and a prepaid shipping label for domestic returns within Switzerland and Liechtenstein. Returns from other countries are the customer's responsibility to ship back at their own cost, unless the return is due to a defect or an error on our part, in which case we cover the cost in both directions.\n\nRefunds are issued to the original payment method within ten business days of the returned item passing inspection at our warehouse. If an item is returned in a condition that does not meet the criteria above — visible wear, missing accessories, or an opened safety-critical component — we will contact you with photographs and offer either a partial refund or to return the item to you at your cost.\n\nExchanges for a different size or model follow the same process as a return followed by a new order, rather than a direct swap, so that stock and pricing are accurate at the time the replacement item ships.\n\nUse a trackable shipping method for a return you are paying for yourself; we are not able to issue a refund for a package that a courier's tracking shows as undelivered, and cannot take responsibility for a return sent without proof of shipment. Keep the receipt from the courier until your refund has been confirmed by email.",
+      "class": "legal",
+      "surfaces": [
+        "/legal/returns"
+      ],
+      "translatable": true
+    },
+    "legal.warranty.title": {
+      "text": "Warranty",
+      "class": "legal",
+      "surfaces": [
+        "/legal/warranty"
+      ],
+      "translatable": true
+    },
+    "legal.warranty.body": {
+      "text": "Firn equipment is warranted against manufacturing defects in materials and workmanship for two years from the date of purchase, in line with the minimum guarantee period required under Swiss consumer law. This warranty covers failures that arise from how the product was made — stitching that separates under normal use, a shell that delaminates, a buckle that fails under specified load — and not from wear, misuse, or damage from an event the product was not designed to survive.\n\nEquipment used beyond its stated retirement criteria, as set out in each product's safety instructions, is not covered regardless of how it failed; a helmet retired ten years past its manufacture date, for example, falls outside the warranty even if the specific failure looks like a manufacturing fault. Equipment that has absorbed a fall or impact it was designed to absorb once — a via ferrata energy absorber, a helmet shell — is expected to be retired after that event, and a claim that it failed on a second impact is not a manufacturing defect.\n\nTo make a warranty claim, contact customer service with your order number, a description of the fault, and photographs showing the issue clearly. We may ask for the item to be returned for inspection at our cost; if the fault is confirmed as a manufacturing defect, we will repair the item where practical, replace it with the same or an equivalent model if the original is no longer available, or refund the purchase price if neither is possible.\n\nThis warranty is in addition to, and does not limit, your statutory rights as a consumer, including the right to a remedy for goods that were defective at the time of delivery regardless of any warranty period stated by the manufacturer. Warranty coverage is not transferable to a second owner unless the original proof of purchase accompanies the item and the original purchaser confirms the transfer in writing to customer service.\n\nA warranty claim and a return are handled through the same customer service channel but follow different rules: the 30-day return window in our returns policy applies to a change of mind, while the two-year warranty period applies specifically to a manufacturing defect that was not apparent at the time of delivery. If you are unsure which applies to your situation, contact us with a description of the issue and we will advise which process fits.",
+      "class": "legal",
+      "surfaces": [
+        "/legal/warranty"
+      ],
+      "translatable": true
+    },
+    "legal.privacy.title": {
+      "text": "Privacy Policy",
+      "class": "legal",
+      "surfaces": [
+        "/legal/privacy"
+      ],
+      "translatable": true
+    },
+    "legal.privacy.body": {
+      "text": "We collect the information needed to process an order — name, delivery address, email address and payment details — and process it under the legal basis of performing the contract of sale. Payment details are handled directly by our payment processor and are not stored on Firn's own systems; we retain only a confirmation reference for each transaction, not card or account numbers.\n\nWe record browsing and purchase activity on our site, including the pages viewed, the language a visitor's browser requests, and events such as adding an item to a cart or completing a purchase. This data is used in aggregate to understand which products and pages need attention, including which pages are effective in languages other than English, and is not linked to an individual's identity beyond a session identifier stored in a cookie that expires when the browser session ends.\n\nWe do not sell personal data to third parties. We share order data with the courier handling delivery, limited to what is needed to deliver the package, and with our payment processor, limited to what is needed to process the transaction. We do not share browsing data with advertising networks.\n\nYou may request a copy of the personal data we hold about you, request that it be corrected, or request that it be deleted, subject to our obligation to retain order records for tax and warranty purposes for the periods required under Swiss law. To make a request, contact customer service with your order number or the email address associated with your account.\n\nContent on this site is machine-translated in some languages and professionally verified in others; the verification state of a given page does not affect how your personal data is collected or processed, which follows this policy regardless of the language a page is displayed in.\n\nOur servers and analytics database are hosted in Switzerland. Where processing an order requires sending data to a processor located outside Switzerland or the European Economic Area — a courier's tracking system, for instance — we rely only on processors that provide contractual safeguards recognised under Swiss and EU data protection law. Session cookies used to keep your cart and locale preference between page loads are strictly necessary for the site to function and are not used for advertising; we do not currently use non-essential tracking cookies, and this policy will be updated before we do.",
+      "class": "legal",
+      "surfaces": [
+        "/legal/privacy"
+      ],
+      "translatable": true
+    },
+    "legal.shipping.title": {
+      "text": "Shipping",
+      "class": "legal",
+      "surfaces": [
+        "/legal/shipping"
+      ],
+      "translatable": true
+    },
+    "cart.title": {
+      "text": "Your cart",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "cart.empty": {
+      "text": "Your cart is empty.",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "cart.remove": {
+      "text": "Remove",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "cart.total": {
+      "text": "Total",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "cart.checkout": {
+      "text": "Proceed to checkout",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "cart.count.one": {
+      "text": "{n} item in your cart",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "cart.count.other": {
+      "text": "{n} items in your cart",
+      "class": "transactional",
+      "surfaces": [
+        "/cart"
+      ],
+      "translatable": true
+    },
+    "checkout.title": {
+      "text": "Checkout",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.field.name": {
+      "text": "Full name",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.field.email": {
+      "text": "Email address",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.field.address": {
+      "text": "Street and number",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.field.postcode": {
+      "text": "Postcode",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.field.city": {
+      "text": "City",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.shipping": {
+      "text": "Shipping method",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.shipping.standard": {
+      "text": "Standard (2–5 business days, free)",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.shipping.express": {
+      "text": "Express (1–2 business days, CHF 18)",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.payment": {
+      "text": "Payment method",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.field.card": {
+      "text": "Card number",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "checkout.submit": {
+      "text": "Place order",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "order.title": {
+      "text": "Order confirmed",
+      "class": "transactional",
+      "surfaces": [
+        "/order/*"
+      ],
+      "translatable": true
+    },
+    "order.thanks": {
+      "text": "Thank you — your order has been received and will ship from our Zurich warehouse.",
+      "class": "transactional",
+      "surfaces": [
+        "/order/*"
+      ],
+      "translatable": true
+    },
+    "order.number": {
+      "text": "Order number",
+      "class": "transactional",
+      "surfaces": [
+        "/order/*"
+      ],
+      "translatable": true
+    },
+    "order.total": {
+      "text": "Total",
+      "class": "transactional",
+      "surfaces": [
+        "/order/*"
+      ],
+      "translatable": true
+    },
+    "error.field_required": {
+      "text": "This field is required.",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "error.checkout_failed": {
+      "text": "We could not process your order. Please check your details and try again.",
+      "class": "transactional",
+      "surfaces": [
+        "/checkout"
+      ],
+      "translatable": true
+    },
+    "error.not_found": {
+      "text": "We could not find the page you were looking for.",
+      "class": "transactional",
+      "surfaces": [
+        "*"
+      ],
+      "translatable": true
+    }
+  }
+}
